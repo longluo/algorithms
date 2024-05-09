@@ -4,7 +4,8 @@
 using namespace std;
 
 // Test program
-int main() {
+int main()
+{
     BinarySearchTree<int> t;
     int NUMS = 400000;
     const int GAP = 3711;
@@ -12,7 +13,8 @@ int main() {
 
     cout << "Checking... (no more output means success)" << endl;
 
-    for (i = GAP; i != 0; i = (i + GAP) % NUMS) {
+    for (i = GAP; i != 0; i = (i + GAP) % NUMS)
+    {
         t.insert(i);
     }
 
@@ -28,7 +30,8 @@ int main() {
         if (!t.contains(i))
             cout << "Find error1!" << endl;
 
-    for (i = 1; i < NUMS; i += 2) {
+    for (i = 1; i < NUMS; i += 2)
+    {
         if (t.contains(i))
             cout << "Find error2!" << endl;
     }
@@ -37,12 +40,19 @@ int main() {
     t2 = t;
 
     for (i = 2; i < NUMS; i += 2)
+    {
         if (!t2.contains(i))
+        {
             cout << "Find error1!" << endl;
+        }
+    }
 
-    for (i = 1; i < NUMS; i += 2) {
+    for (i = 1; i < NUMS; i += 2)
+    {
         if (t2.contains(i))
+        {
             cout << "Find error2!" << endl;
+        }
     }
 
     cout << "Finished testing" << endl;
