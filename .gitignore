@@ -14,12 +14,12 @@ Thumbs.db
 .idea/
 
 
-
 # Generated files
 bin/
 gen/
 out/
 build/
+cmake-build-debug/
 
 
 # Prerequisites
